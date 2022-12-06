@@ -12,7 +12,9 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-    "@mui/material": "^5.10.16",
+    "@fontsource/roboto": "^4.5.8",
+    "@mui/icons-material": "^5.10.16",
+    "@mui/material": "^5.10.17",
     "@reduxjs/toolkit": "^1.9.1",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
