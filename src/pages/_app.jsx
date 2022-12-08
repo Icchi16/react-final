@@ -1,16 +1,15 @@
 import React from "react";
-import Footer from "../components/footer/Footer";
-import Navbar from "../components/navbar/Navbar";
+import HomeLayout from "../layouts/HomeLayout";
+import "../styles/globals.css"
+import "antd/dist/reset.css";
 
 const MyApp = ({ Component, pageProp }) => {
   return (
-    <div>
-      <Navbar />
-
-      <Component {...pageProp} />
-
-      <Footer />
-    </div>
+    <>
+      <HomeLayout>
+        <Component {...pageProp} />
+      </HomeLayout>
+    </>
   );
 };
 
