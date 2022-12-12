@@ -11,16 +11,18 @@ import { Menu, Layout } from "antd";
 const { Header } = Layout;
 const HomeHeader = () => {
   return (
-    <Header className="flex">
-      <div className="1st-line-header flex-none">
-        <div className="logo">Logo</div>
+    <Header className="flex-col">
+      <div className="container mx-auto 1st-line-header flex-row flex"></div>
+      <div className="container mx-auto 2nd-line-header flex flex-row flex-nowrap">
+        <Link href="/" className="flex-none">
+          {/* <Image src="./" alt="" /> */}
+          Logo
+        </Link>
+        <div className="flex-auto">Search</div>
+        <div className="flex-1">Language</div>
+        <div className="flex-1">Login</div>
       </div>
-      <div className="2nd-line-header flex-1">
-        <div>Search</div>
-        <div>Language</div>
-        <div>Login</div>
-      </div>
-      <div className="3rd-line-header">
+      <div className="container mx-auto 3rd-line-header">
         <Menu
           mode="horizontal"
           defaultSelectedKeys={"item-2"}

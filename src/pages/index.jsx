@@ -4,7 +4,7 @@ import { Button } from "antd";
 
 const App = () => {
   return (
-    <div>
+    <div className="container mx-auto">
       <h1 className="text-1xl font-bold underline">Hello world!</h1>
 
       <Button size="large" type="primary">
