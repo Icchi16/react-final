@@ -1,54 +1,62 @@
 import React from "react";
-import { Menu } from "antd";
+import { Divider, Menu } from "antd";
 //
-import {
-  DesktopOutlined,
-  FileOutlined,
-  PieChartOutlined,
-  TeamOutlined,
-  UserOutlined,
-} from "@ant-design/icons";
-//
+import { AiFillHome } from "react-icons/ai";
+import { RiMusicFill } from "react-icons/ri";
+import { IoMdFootball, IoMdMicrophone } from "react-icons/io";
+import { GoRadioTower } from "react-icons/go";
 
-function getItem(label, key, icon, children) {
-  return {
-    key,
-    icon,
-    children,
-    label,
-  };
-}
-const items = [
-  getItem("Option 1", "1", <PieChartOutlined />),
-  getItem("Option 2", "2", <DesktopOutlined />),
-  getItem("User", "sub1", <UserOutlined />, [
-    getItem("Tom", "3"),
-    getItem("Bill", "4"),
-    getItem("Alex", "5"),
-  ]),
-  getItem("Team", "sub2", <TeamOutlined />, [
-    getItem("Team 1", "6"),
-    getItem("Team 2", "8"),
-  ]),
-  getItem("Files", "9", <FileOutlined />),
-];
+import Link from "next/link";
+import Image from "next/image";
+import styles from "./HomeSider.module.css";
+import Login from "../login/Login";
+
+//
 
 const HomeSider = () => {
+  const onClick = ({ key }) => {
+    console.log("clicked");
+  };
+
   return (
     <div>
-      <div
-        style={{
-          height: 32,
-          margin: 16,
-          background: "rgba(255, 255, 255, 0.2)",
-        }}
-      />
+      <div className={styles.LogoContainer}>
+        <Link href="/">
+          <Image className={styles.Logo} src="/images/Logo.svg" fill={true} />
+        </Link>
+      </div>
       <Menu
+        onClick={onClick}
         theme="dark"
         defaultSelectedKeys={["1"]}
         mode="inline"
-        items={items}
-      />
+      >
+        <Menu.Item key="1" icon={<AiFillHome />}>
+          For you
+        </Menu.Item>
+        <Menu.Item key="2" icon={<AiFillHome />}>
+          Music
+        </Menu.Item>
+        <Menu.Item key="3" icon={<AiFillHome />}>
+          Podcasts
+        </Menu.Item>
+        <Menu.Item key="4" icon={<AiFillHome />}>
+          Sports
+        </Menu.Item>
+        <Menu.Item key="5" icon={<AiFillHome />}>
+          News
+        </Menu.Item>
+        <Divider className={styles.divider} />
+        <Menu.Item key="6">All podcasts &#62;</Menu.Item>
+        <Menu.Item key="7">All stations &#62;</Menu.Item>
+        <Divider className={styles.divider} />
+        {/* <Menu.Item disabled className=" cursor-default">
+          <Login />
+        </Menu.Item> */}
+        <Menu.Item key="8" icon={<AiFillHome />}>
+          Signin &#62;
+        </Menu.Item>
+      </Menu>
     </div>
   );
 };

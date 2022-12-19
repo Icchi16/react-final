@@ -3,23 +3,20 @@ module.exports = {
   important: true, // to generate utilities as !important
   content: [
     // add the paths to all of your template files
-    "./src/pages/**/*.{js,ts,jsx,tsx}",
-    "./src/components/**/*.{js,ts,jsx,tsx}",
-    "./src/layouts/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,jsx}",
+    "./src/**/*}",
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        // add new font family
-        montserrat: ["Montserrat", "sans-serif"],
-      },
+    fontFamily: {
+      // add new font family
+      montserrat: ["Montserrat", "sans-serif"],
     },
     colors: {
       // custom color palette
       primary: "#441151",
       secondary: "#EE85B5",
       violet: "#883677",
-      congo: "##FF958C",
+      congo: "#FF958C",
       success: "#5FC790",
       warning: "#FFA600",
       danger: "#FF5630",
@@ -31,6 +28,7 @@ module.exports = {
       grey3: "#E3E8F1",
       light: "#F9FBFC",
       white: "#FFF",
+      base: "#001529",
     },
   },
   plugins: [],

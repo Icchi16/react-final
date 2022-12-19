@@ -6,7 +6,7 @@ import { Layout, theme, Breadcrumb, Menu } from "antd";
 import HomeHeader from "../components/header/HomeHeader";
 import HomeFooter from "../components/footer/HomeFooter";
 import HomeSider from "../components/sider/HomeSider";
-// 
+//
 const { Header, Content, Footer, Sider } = Layout;
 
 const HomeLayout = ({ children }) => {
@@ -27,18 +27,12 @@ const HomeLayout = ({ children }) => {
       >
         <HomeSider />
       </Sider>
-      <Layout className="site-layout">
-        <Header>
+      <Layout>
+        <Header className="bg-base">
           <HomeHeader />
         </Header>
-        <Content
-          style={{
-            margin: "0 16px",
-          }}
-        >
-          {children}
-        </Content>
-        <Footer>
+        <Content className="bg-base">{children}</Content>
+        <Footer className="bg-base">
           <HomeFooter />
         </Footer>
       </Layout>

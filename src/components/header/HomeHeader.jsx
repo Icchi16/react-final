@@ -1,4 +1,4 @@
-import Search from "antd/es/transfer/search";
+import HomeSearch from "../search/HomeSearch";
 import React from "react";
 // Ant Design
 
@@ -6,7 +6,7 @@ import React from "react";
 const HomeHeader = () => {
   return (
     <div>
-      <Search />
+      <HomeSearch />
     </div>
   );
 };
