@@ -1,19 +1,13 @@
 import React from "react";
-import Head from "next/head";
-import { Button } from "antd";
+import HomeSwiper from "../components/swiper/homeSwiper/HomeSwiper";
 
 const App = () => {
   return (
     <div className="container mx-auto">
-      <h1 className="text-1xl font-bold underline">Hello world!</h1>
-
-      <Button size="large" type="primary">
-        Button
-      </Button>
-
-      <Button size="large" type="primary" className="bg-primary border-primary">
-        Button
-      </Button>
+      <div>
+        For you
+        <HomeSwiper />
+      </div>
     </div>
   );
 };
