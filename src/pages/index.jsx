@@ -5,7 +5,7 @@ const App = () => {
   return (
     <div className="container mx-auto">
       <div>
-        For you
+        <h2 className="mb-12">For you</h2>
         <HomeSwiper />
       </div>
     </div>

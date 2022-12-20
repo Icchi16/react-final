@@ -1,13 +1,37 @@
 .HomeSearch {
   position: absolute;
   top: 50px;
-  right: 20px;
+  right: 0px;
 }
 
 .SearchBar {
-    width: 300px;
+  width: 300px;
 }
 
-.SearchBar input, .SearchBar button{
-height: 40px;
+.SearchBar * {
+  border-color: #ffffff0c;
+  color: white !important;
+}
+
+.SearchBar > span,
+.SearchBar > span > span {
+  border-radius: 5px;
+  background-color: #ffffff0c;
+}
+
+.SearchBar input {
+  font-size: 0.85rem !important;
+  background: none !important;
+}
+
+.SearchBar input::placeholder {
+  color: rgba(255, 255, 255, 0.527) !important;
+}
+
+.SearchBar button {
+  background: #ffffff2f;
+}
+
+.SearchBar button > span {
+  color: white !important;
 }

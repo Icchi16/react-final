@@ -12,10 +12,11 @@ const HomeSwiper = () => {
 
   return (
     <Swiper
+      className={styles.HomeSwiper}
       // install Swiper modules
       modules={[Navigation, Scrollbar]}
-      spaceBetween={50}
-      slidesPerView={5}
+      spaceBetween={10}
+      slidesPerView={7}
       navigation
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}

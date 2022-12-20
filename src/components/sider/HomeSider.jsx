@@ -34,16 +34,16 @@ const HomeSider = () => {
         <Menu.Item key="1" icon={<AiFillHome />}>
           For you
         </Menu.Item>
-        <Menu.Item key="2" icon={<AiFillHome />}>
+        <Menu.Item key="2" icon={<RiMusicFill />}>
           Music
         </Menu.Item>
-        <Menu.Item key="3" icon={<AiFillHome />}>
+        <Menu.Item key="3" icon={<IoMdMicrophone />}>
           Podcasts
         </Menu.Item>
-        <Menu.Item key="4" icon={<AiFillHome />}>
+        <Menu.Item key="4" icon={<IoMdFootball />}>
           Sports
         </Menu.Item>
-        <Menu.Item key="5" icon={<AiFillHome />}>
+        <Menu.Item key="5" icon={<GoRadioTower />}>
           News
         </Menu.Item>
         <Divider className={styles.divider} />

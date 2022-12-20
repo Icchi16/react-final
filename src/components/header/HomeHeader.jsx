@@ -5,7 +5,7 @@ import React from "react";
 // Code
 const HomeHeader = () => {
   return (
-    <div>
+    <div className="container mx-auto relative">
       <HomeSearch />
     </div>
   );
