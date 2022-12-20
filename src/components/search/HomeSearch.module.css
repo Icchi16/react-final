@@ -1,0 +1,13 @@
+.HomeSearch {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+}
+
+.SearchBar {
+    width: 300px;
+}
+
+.SearchBar input, .SearchBar button{
+height: 40px;
+}

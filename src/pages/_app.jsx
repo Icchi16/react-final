@@ -7,7 +7,7 @@ import { ConfigProvider, theme } from "antd";
 
 const MyApp = ({ Component, pageProp }) => {
   return (
-    <ConfigProvider>
+    <ConfigProvider theme={{ token: { colorPrimary: "#2c4a75" } }}>
       <HomeLayout>
         <Component {...pageProp} />
       </HomeLayout>

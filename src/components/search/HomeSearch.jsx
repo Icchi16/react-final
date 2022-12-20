@@ -9,11 +9,13 @@ const HomeSearch = () => {
   const onSearch = (value) => console.log(value);
 
   return (
-    <div className="">
+    <div className={styles.HomeSearch}>
       <Search
         placeholder="Search your station!"
+        allowClear
+        size="large"
         onSearch={onSearch}
-        style={{ width: 200 }}
+        className={styles.SearchBar}
       />
     </div>
   );
