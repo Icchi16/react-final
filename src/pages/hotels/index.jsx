@@ -1,9 +1,5 @@
-export const getStaticPaths = async (ctx) => {
-  console.log(context.param);
+import React from "react";
 
-  const res = await fetch();
-};
+const Hotel = () => {};
 
-// staticPath - Co bao nhieu san pham
-
-// staticProps
+export default Hotel;
