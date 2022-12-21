@@ -11,6 +11,9 @@ module.exports = {
       // add new font family
       montserrat: ["Montserrat", "sans-serif"],
     },
+    fontSize: {
+      base: ["1rem", "1.5rem"],
+    },
     colors: {
       // custom color palette
       primary: "#441151",

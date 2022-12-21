@@ -11,30 +11,30 @@ const HomeSwiper = () => {
   const slidePerView = () => {};
 
   return (
-    <Swiper
-      className={styles.HomeSwiper}
-      // install Swiper modules
-      modules={[Navigation, Scrollbar]}
-      spaceBetween={10}
-      slidesPerView={7}
-      navigation
-      scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log("slide change")}
-    >
-      <SwiperSlide className={styles.box}>Slide 1</SwiperSlide>
-      <SwiperSlide className={styles.box}>Slide 1</SwiperSlide>
-      <SwiperSlide className={styles.box}>Slide 1</SwiperSlide>
-      <SwiperSlide className={styles.box}>Slide 1</SwiperSlide>
-      <SwiperSlide className={styles.box}>Slide 1</SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
-    </Swiper>
+    <div className={styles.HomeSwiperContainer}>
+      <Swiper
+        className={styles.HomeSwiper}
+        // install Swiper modules
+        modules={[Navigation, Scrollbar]}
+        spaceBetween={10}
+        slidesPerView={7}
+        navigation
+        scrollbar={{ draggable: true }}
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log("slide change")}
+      >
+        <SwiperSlide className={styles.box}>Slide 1</SwiperSlide>
+        <SwiperSlide className={styles.box}>Slide 1</SwiperSlide>
+        <SwiperSlide className={styles.box}>Slide 1</SwiperSlide>
+        <SwiperSlide className={styles.box}>Slide 1</SwiperSlide>
+        <SwiperSlide className={styles.box}>Slide 1</SwiperSlide>
+        <SwiperSlide className={styles.box}>Slide 1</SwiperSlide>
+        <SwiperSlide className={styles.box}>Slide 1</SwiperSlide>
+        <SwiperSlide className={styles.box}>Slide 1</SwiperSlide>
+        <SwiperSlide className={styles.box}>Slide 1</SwiperSlide>
+        <SwiperSlide className={styles.box}>Slide 1</SwiperSlide>
+      </Swiper>
+    </div>
   );
 };
 

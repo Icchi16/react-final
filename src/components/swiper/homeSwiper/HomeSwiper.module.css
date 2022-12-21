@@ -1,10 +1,22 @@
-.box {
+.box:nth-child(even) {
   width: 220px;
   height: 220px;
 
-  background-color: red;
+  background-color: olive;
 }
 
-.HomeSwiper{
-  width: 120%;
+.box:nth-child(odd) {
+  width: 220px;
+  height: 220px;
+
+  background-color: peru;
+}
+
+.HomeSwiperContainer {
+  width: inherit;
+  overflow: hidden;
+}
+
+.HomeSwiper {
+  width: 110%;
 }
