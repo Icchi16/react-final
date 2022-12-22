@@ -54,7 +54,7 @@ const HomeSider = () => {
           <Login />
         </Menu.Item> */}
         <Menu.Item key="8" icon={<AiFillHome />}>
-          Signin &#62;
+          Sign in &#62;
         </Menu.Item>
       </Menu>
     </div>
