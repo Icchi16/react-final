@@ -2,19 +2,19 @@ import { createSlice } from "@reduxjs/toolkit";
 import { random } from "lodash";
 
 const initialState = {
-  data: "hello",
+  data: "Duy",
 };
 
 export const randomRadioSlice = createSlice({
   name: "randomRadio",
   initialState,
   reducers: {
-    click: (state) => {
-      console.log(state.data);
+    click: (state, action) => {
+      console.log(`Hello ${state.data}`);
     },
   },
 });
 
 export const { click } = randomRadioSlice.actions;
 
-export default randomRadioSlice.reducer;
+export const randomRadioReducer = randomRadioSlice.reducer;
