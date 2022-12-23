@@ -15,7 +15,7 @@ import Login from "../login/Login";
 
 const HomeSider = () => {
   const onClick = ({ key }) => {
-    console.log("clicked");
+    console.log(`clicked on ${key}`);
   };
 
   return (
@@ -31,7 +31,7 @@ const HomeSider = () => {
         defaultSelectedKeys={["1"]}
         mode="inline"
       >
-        <Menu.Item key="1" icon={<AiFillHome />}>
+        {/* <Menu.Item key="1" icon={<AiFillHome />}>
           For you
         </Menu.Item>
         <Menu.Item key="2" icon={<RiMusicFill />}>
@@ -53,9 +53,9 @@ const HomeSider = () => {
         {/* <Menu.Item disabled className=" cursor-default">
           <Login />
         </Menu.Item> */}
-        <Menu.Item key="8" icon={<AiFillHome />}>
+        {/* <Menu.Item key="8" icon={<AiFillHome />}>
           Sign in &#62;
-        </Menu.Item>
+        </Menu.Item> */}
       </Menu>
     </div>
   );

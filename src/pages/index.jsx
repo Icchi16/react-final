@@ -1,7 +1,10 @@
 import React from "react";
 import HomeSwiper from "../components/swiper/homeSwiper/HomeSwiper";
+import Link from "next/link";
 
 const App = () => {
+
+  console.log(api);
   return (
     <div className="container mx-auto">
       <div>
