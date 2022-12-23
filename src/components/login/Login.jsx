@@ -3,12 +3,14 @@ import React from "react";
 import { Button } from "antd";
 import { FaUserCircle } from "react-icons/fa";
 
-const Login = () => {
+export const Login = () => {
   return (
-    <Button>
-      <FaUserCircle />
-    </Button>
+    <div>
+      Login
+    </div>
   );
 };
 
-export default Login;
+export const Login2 = () => {
+  return <div>Logout</div>;
+};

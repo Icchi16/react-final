@@ -10,9 +10,13 @@
   position: static !important;
 }
 
-.divider {
+.Menu > li[class="ant-menu-item-divider"] {
   background-color: #ffffffa6;
-  min-width: 20px !important;
-  width: 80% !important;
+  width: 80%;
   margin: 10px auto;
+  border: 1px solid #0505050f;
+}
+
+.Menu > li:nth-last-child(1) {
+  height: 100%
 }
