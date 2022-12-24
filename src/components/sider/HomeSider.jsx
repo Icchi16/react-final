@@ -45,7 +45,8 @@ const HomeSider = () => {
     getMenuItem("item", "login", <Login />),
     getMenuItem("item", "login2", <Login2 />, _, _, _, "danger"),
   ];
-
+  
+// render comp
   return (
     <div>
       <div className={styles.LogoContainer}>
@@ -66,31 +67,6 @@ const HomeSider = () => {
         mode="inline"
         items={menuItems}
       />
-      {/* <Menu.Item key="1" icon={<AiFillHome />}>
-          For you
-        </Menu.Item>
-        <Menu.Item key="2" icon={<RiMusicFill />}>
-          Music
-        </Menu.Item>
-        <Menu.Item key="3" icon={<IoMdMicrophone />}>
-          Podcasts
-        </Menu.Item>
-        <Menu.Item key="4" icon={<IoMdFootball />}>
-          Sports
-        </Menu.Item>
-        <Menu.Item key="5" icon={<GoRadioTower />}>
-          News
-        </Menu.Item>
-        <Divider className={styles.divider} />
-        <Menu.Item key="6">All podcasts &#62;</Menu.Item>
-        <Menu.Item key="7">All stations &#62;</Menu.Item>
-        <Divider className={styles.divider} />
-        {/* <Menu.Item disabled className=" cursor-default">
-          <Login />
-        </Menu.Item> */}
-      {/* <Menu.Item key="8" icon={<AiFillHome />}>
-          Sign in &#62;
-        </Menu.Item> */}
     </div>
   );
 };
