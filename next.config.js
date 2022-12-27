@@ -4,8 +4,8 @@ const NextConfig = {
   rewrites() {
     return [
       {
-        source: "/products",
-        destination: `${process.env.BASE_API / products}`,
+        source: "/radios",
+        destination: `${process.env.BASE_API}`,
       },
     ];
   },

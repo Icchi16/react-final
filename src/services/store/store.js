@@ -1,33 +1,22 @@
-import { configureStore, createAsyncThunk } from "@reduxjs/toolkit";
-import { randomRadioReducer } from "../features/randomRadio/randomRadio.slice";
+import { configureStore } from "@reduxjs/toolkit";
+import { createWrapper } from "next-redux-wrapper";
+import { radioApi } from "../slices/radioApi/radioApi.slice";
+import topClickRadioReducer from "../slices/topClickRadio/topClickRadio.slice";
 
-const createStore = (preloadedState) => {
-  return configureStore({
+// export const makeStore = configureStore({
+//   reducer: {
+//     [radioApi.reducerPath]: radioApi.reducer,
+//   },
+//   middleware: (gDM) => gDM().concat(radioApi.middleware),
+// });
+
+// export const wrapper = createWrapper(makeStore, { debug: true });
+
+const makeStore = () =>
+  configureStore({
     reducer: {
-      click: randomRadioReducer,
+      topClickRadio: topClickRadioReducer,
     },
-    preloadedState,
   });
-};
 
-let store;
-export const initializeStore = (preloadedState) => {
-  let _store = store ?? createStore(preloadedState);
-  if (preloadedState && store) {
-    _store = createStore({ ...store.getState(), ...preloadedState });
-    store = undefined;
-  }
-
-  if (typeof window === "undefined") {
-    return _store;
-  } else if (!store) {
-    store = _store;
-  }
-  return _store;
-};
-
-export const store = configureStore({
-  reducer: {
-    click: randomRadioReducer,
-  },
-});
+export const wrapper = createWrapper(makeStore);

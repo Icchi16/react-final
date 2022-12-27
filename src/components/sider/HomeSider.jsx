@@ -45,13 +45,14 @@ const HomeSider = () => {
     getMenuItem("item", "login", <Login />),
     getMenuItem("item", "login2", <Login2 />, _, _, _, "danger"),
   ];
-  
-// render comp
+
+  // render comp
   return (
     <div>
       <div className={styles.LogoContainer}>
         <Link href="/">
           <Image
+            priority
             alt="Angten"
             className={styles.Logo}
             src="/images/Logo.svg"
