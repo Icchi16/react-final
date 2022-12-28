@@ -8,12 +8,12 @@ import { wrapper } from "../services/store/store";
 
 const MyApp = ({ Component, ...rest }) => {
   const { store, props } = wrapper.useWrappedStore(rest);
-  console.log(props)
+  console.log(store);
   return (
     <Provider store={store}>
       <ConfigProvider theme={{ token: { colorPrimary: "#2c4a75" } }}>
         <HomeLayout>
-          <Component {...props.pageProp} />
+          <Component {...props.pageProps} />
         </HomeLayout>
       </ConfigProvider>
     </Provider>

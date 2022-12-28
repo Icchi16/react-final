@@ -15,12 +15,13 @@ const topClickRadioSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase([HYDRATE], (state, action) => {
-      console.log("HYDRATE", action.payload);
-      state.data = action.payload.topClickRadioSlice.data;
+    builder.addCase(HYDRATE, (state, action) => {
+      // console.log("HYDRATE", action.payload.topClickRadio.data);
+      state.data = action.payload.topClickRadio.data;
     });
   },
 });
 
 export const { getTopClickRadio } = topClickRadioSlice.actions;
+export const selectTopClickRadio = (state) => state.topClickRadio;
 export default topClickRadioSlice.reducer;

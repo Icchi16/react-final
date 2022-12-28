@@ -1,33 +1,39 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import HomeSwiper from "../components/swiper/homeSwiper/HomeSwiper";
 import { wrapper } from "../services/store/store";
+import {
+  getTopClickRadio,
+  selectTopClickRadio,
+} from "../services/slices/topClickRadio/topClickRadio.slice";
 
 const App = (props) => {
-  const { data } = props;
-  console.log(data);
+  const topClickRadio = useSelector(selectTopClickRadio);
+  console.log(topClickRadio);
+  const dispatch = useDispatch();
+
   return (
     <div className="container mx-auto">
       <div>
-        <h2 className="mb-12">For you {process.env.TOP_CLICK}</h2>
+        <h2 className="mb-12">For you</h2>
         <HomeSwiper />
-        <h1>Click here {data}</h1>
+        <h1
+          onClick={() => {
+            dispatch(getTopClickRadio("test"));
+          }}
+        >
+          {`Hello ${topClickRadio.data}`}
+        </h1>
       </div>
     </div>
   );
 };
 
 export const getServerSideProps = wrapper.getServerSideProps(
-  (store) =>
-    async ({ resolvedUrl }) => {
-      console.log("resolvedUrl", resolvedUrl);
-
-      return {
-        props: {
-          data: resolvedUrl,
-        },
-      };
-    }
+  (store) => async () => {
+    store.dispatch(getTopClickRadio("It's Alive"));
+    return { props: {} };
+  }
 );
 
 export default App;
