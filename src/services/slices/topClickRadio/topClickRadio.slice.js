@@ -1,8 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
+import axios from "axios";
 import { HYDRATE } from "next-redux-wrapper";
 
 const initialState = {
-  data: null,
+  data: [],
 };
 
 const topClickRadioSlice = createSlice({
@@ -10,13 +11,12 @@ const topClickRadioSlice = createSlice({
   initialState,
   reducers: {
     getTopClickRadio: (state, action) => {
-      // todo handle client
-      state.data = action.payload;
+      const data = axios.get(process.env.TOP_CLICK);
+      console.log(data);
     },
   },
   extraReducers: (builder) => {
     builder.addCase(HYDRATE, (state, action) => {
-      // console.log("HYDRATE", action.payload.topClickRadio.data);
       state.data = action.payload.topClickRadio.data;
     });
   },

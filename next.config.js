@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const NextConfig = {
   reactStrictMode: true,
-  rewrites() {
+  async rewrites() {
     return [
       {
         source: "/radios",
@@ -10,3 +10,4 @@ const NextConfig = {
     ];
   },
 };
+

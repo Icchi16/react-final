@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import HomeSwiper from "../components/swiper/homeSwiper/HomeSwiper";
+import HomeSwiper from "../components/swiper/radioSwiper/RadioSwiper";
 import { wrapper } from "../services/store/store";
 import {
   getTopClickRadio,
