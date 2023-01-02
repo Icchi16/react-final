@@ -12,7 +12,10 @@ module.exports = {
       montserrat: ["Montserrat", "sans-serif"],
     },
     fontSize: {
-      base: ["1rem", "1.5rem"],
+      sm: ["14px", "20px"],
+      base: ["16px", "24px"],
+      lg: ["20px", "28px"],
+      xl: ["24px", "32px"],
     },
     colors: {
       // custom color palette
