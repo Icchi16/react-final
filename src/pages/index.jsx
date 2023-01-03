@@ -6,16 +6,17 @@ import {
   getTopClickRadio,
   selectTopClickRadio,
 } from "../services/slices/topClickRadio/topClickRadio.slice";
+import { Typography } from "antd";
 
 const App = (props) => {
   const topClickRadio = useSelector(selectTopClickRadio);
-  console.log(topClickRadio);
   const dispatch = useDispatch();
 
   return (
     <div className="container mx-auto">
       <div>
-        <h2 className="mb-12">For you</h2>
+        <h2 className="mb-7 mt-0">For You</h2>
+
         <HomeSwiper />
         <h1
           onClick={() => {

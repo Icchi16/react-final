@@ -4,7 +4,7 @@ module.exports = {
   content: [
     // add the paths to all of your template files
     "./src/**/*.{js,jsx}",
-    "./src/**/*}",
+    "./index.html",
   ],
   theme: {
     fontFamily: {
@@ -16,6 +16,18 @@ module.exports = {
       base: ["16px", "24px"],
       lg: ["20px", "28px"],
       xl: ["24px", "32px"],
+      xxl: ["32px", "40px"],
+    },
+    fontWeight: {
+      "extra-light": 100,
+      thin: 200,
+      light: 300,
+      normal: 400,
+      medium: 500,
+      semibold: 600,
+      bold: 700,
+      "extra-bold": 800,
+      black: 900,
     },
     colors: {
       // custom color palette

@@ -4,16 +4,16 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 
-h2 {
-  @apply text-xl;
-  @apply font-bold;
-}
-
 html,
 body {
   padding: 0;
   margin: 0;
   @apply text-white;
+}
+
+h2 {
+  @apply text-xxl;
+  @apply font-bold;
 }
 
 a {
