@@ -18,5 +18,9 @@
 }
 
 .Menu > li:nth-last-child(1) {
-  height: 100%
+  height: 100%;
+}
+
+.Menu > li {
+  user-select: none;
 }
