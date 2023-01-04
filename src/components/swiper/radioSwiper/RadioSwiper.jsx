@@ -9,7 +9,7 @@ import styles from "./RadioSwiper.module.css";
 import RadioCard from "../radioCard/RadioCard";
 import _ from "lodash";
 
-const HomeSwiper = () => {
+const RadioSwiper = () => {
   const radioList = [1, 2, 3, 4, 5, 6, 7, 8];
   return (
     <div className={styles.HomeSwiperContainer}>
@@ -36,4 +36,4 @@ const HomeSwiper = () => {
   );
 };
 
-export default HomeSwiper;
+export default RadioSwiper;

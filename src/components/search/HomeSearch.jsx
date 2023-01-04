@@ -15,7 +15,8 @@ const HomeSearch = () => {
         size="large"
         onSearch={onSearch}
         className={styles.SearchBar}
-        bordered="false"
+        bordered={false}
+        enterButton
       />
     </div>
   );

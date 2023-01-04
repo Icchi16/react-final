@@ -1,12 +1,13 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import HomeSwiper from "../components/swiper/radioSwiper/RadioSwiper";
+import RadioSwiper from "../components/swiper/radioSwiper/RadioSwiper";
 import { wrapper } from "../services/store/store";
 import {
   getTopClickRadio,
   selectTopClickRadio,
 } from "../services/slices/topClickRadio/topClickRadio.slice";
 import { Typography } from "antd";
+import HorizontalList from "../components/list/horizontalList/HorizontalLis";
 
 const App = (props) => {
   const topClickRadio = useSelector(selectTopClickRadio);
@@ -27,13 +28,13 @@ const App = (props) => {
         <div>
           <h3>Stations Near You</h3>
           <p>Live and local, just for you</p>
-          <HomeSwiper slides={forYouSlides} />
+          <RadioSwiper slides={forYouSlides} />
         </div>
 
         <div>
           <h3>The Latest On Bills Safety Damar Hamlin's Health</h3>
           <p>Live and local, just for you</p>
-          <HomeSwiper slides={hotSlides} />
+          <RadioSwiper slides={hotSlides} />
         </div>
 
         <div>
@@ -41,7 +42,7 @@ const App = (props) => {
           <p>
             Get the best audio in your favorite teams instantly in one place
           </p>
-          <HomeSwiper slides={artistSlides} />
+          <RadioSwiper slides={artistSlides} />
         </div>
 
         <h1

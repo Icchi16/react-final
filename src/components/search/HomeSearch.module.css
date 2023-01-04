@@ -5,33 +5,23 @@
 }
 
 .SearchBar {
-  width: 300px;
+  width: 400px;
 }
 
 .SearchBar * {
-  border-color: #ffffff0c;
   color: white !important;
 }
 
-.SearchBar > span,
-.SearchBar > span > span {
+.SearchBar > span {
   border-radius: 5px;
-  background-color: #ffffff0c;
-}
-
-.SearchBar input {
-  font-size: 0.85rem !important;
-  background: none !important;
+  background-color: #ffffff2f;
 }
 
 .SearchBar input::placeholder {
   color: rgba(255, 255, 255, 0.527) !important;
 }
 
-.SearchBar button {
-  background: #ffffff2f;
-}
-
-.SearchBar button > span {
-  color: white !important;
+.SearchBar input {
+  font-size: 0.9rem !important;
+  background: none !important;
 }

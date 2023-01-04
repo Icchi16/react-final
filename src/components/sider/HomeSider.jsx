@@ -64,7 +64,7 @@ const HomeSider = () => {
         className={styles.Menu}
         onClick={onClick}
         theme="dark"
-        defaultSelectedKeys={["1"]}
+        defaultSelectedKeys={["forYou"]}
         mode="inline"
         items={menuItems}
       />
