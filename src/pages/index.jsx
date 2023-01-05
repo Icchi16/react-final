@@ -59,7 +59,6 @@ const App = (props) => {
 
 export const getServerSideProps = wrapper.getServerSideProps(
   (store) => async () => {
-    store.dispatch(getTopClickRadio("It's Alive"));
     return { props: {} };
   }
 );
