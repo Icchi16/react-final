@@ -21,8 +21,6 @@ const RadioSwiper = () => {
         slidesPerView={6}
         navigation
         scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
       >
         {radioList.map((i) => {
           return (

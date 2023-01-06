@@ -45,13 +45,7 @@ const App = (props) => {
           <RadioSwiper slides={artistSlides} />
         </div>
 
-        <h1
-          onClick={() => {
-            dispatch(getTopClickRadio("test"));
-          }}
-        >
-          {`Hello ${topClickRadio.data}`}
-        </h1>
+        <h1 onClick={() => {}}>{`Hello there`}</h1>
       </div>
     </div>
   );
@@ -59,6 +53,7 @@ const App = (props) => {
 
 export const getServerSideProps = wrapper.getServerSideProps(
   (store) => async () => {
+    await fetch(process.env.BASE_API);
     return { props: {} };
   }
 );
