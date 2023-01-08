@@ -3,22 +3,23 @@ import { useDispatch, useSelector } from "react-redux";
 import RadioSwiper from "../components/swiper/radioSwiper/RadioSwiper";
 import { wrapper } from "../services/store/store";
 import {
-  getTopClickRadio,
-  selectTopClickRadio,
-} from "../services/slices/topClickRadio/topClickRadio.slice";
-import { Typography } from "antd";
-import HorizontalList from "../components/list/horizontalList/HorizontalLis";
+  getPokemonByName,
+  getRunningQueriesThunk,
+  radioApi,
+  resetApiState,
+  useGetPokemonByNameQuery,
+} from "../services/api/radioApi";
 
 const App = (props) => {
-  const topClickRadio = useSelector(selectTopClickRadio);
-  const dispatch = useDispatch();
-
-  const forYouSlides = {
-      data: "sds",
-      styling: [{ home: "home" }, { many: "many" }],
-    },
+  const forYouSlides = [],
     hotSlides = [],
     artistSlides = [];
+  const result = useGetPokemonByNameQuery();
+  const { isLoading, error, data } = result;
+
+  console.log(isLoading);
+  console.log(error);
+  console.log(data);
 
   return (
     <div className="container mx-auto">
@@ -53,7 +54,16 @@ const App = (props) => {
 
 export const getServerSideProps = wrapper.getServerSideProps(
   (store) => async () => {
-    await fetch(process.env.BASE_API);
+    // store.dispatch(api.endpoints.getPokemonByName.initiate());
+
+    // const prom = await Promise.all(
+    //   store.dispatch(radioApi.util.getRunningQueriesThunk())
+    // );
+
+    store.dispatch(resetApiState());
+    store.dispatch(getPokemonByName.initiate());
+    await Promise.all(store.dispatch(getRunningQueriesThunk()));
+
     return { props: {} };
   }
 );
