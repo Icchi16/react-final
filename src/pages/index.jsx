@@ -1,26 +1,22 @@
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useEffect, useState } from "react";
 import RadioSwiper from "../components/swiper/radioSwiper/RadioSwiper";
 import { wrapper } from "../services/store/store";
 import {
-  getPokemonByName,
   getRunningQueriesThunk,
-  radioApi,
+  getTopRadio,
   resetApiState,
-  useGetPokemonByNameQuery,
+  useGetTopRadioQuery,
 } from "../services/api/radioApi";
 
 const App = (props) => {
   const forYouSlides = [],
     hotSlides = [],
     artistSlides = [];
-  const result = useGetPokemonByNameQuery();
-  const { isLoading, error, data } = result;
+  const topRadioQuery = useGetTopRadioQuery();
+  const topRadioLoading = topRadioQuery.isLoading;
+  console.log(topRadioLoading);
 
-  console.log(isLoading);
-  console.log(error);
-  console.log(data);
-
+  if (topRadioLoading) return <div>Loading...</div>;
   return (
     <div className="container mx-auto">
       <div>
@@ -52,20 +48,20 @@ const App = (props) => {
   );
 };
 
-export const getServerSideProps = wrapper.getServerSideProps(
-  (store) => async () => {
-    // store.dispatch(api.endpoints.getPokemonByName.initiate());
+export const getStaticProps = wrapper.getStaticProps((store) => async () => {
+  store.dispatch(resetApiState());
+  store.dispatch(getTopRadio.initiate());
+  await Promise.all(store.dispatch(getRunningQueriesThunk()));
 
-    // const prom = await Promise.all(
-    //   store.dispatch(radioApi.util.getRunningQueriesThunk())
-    // );
+  return { props: {} };
+});
 
-    store.dispatch(resetApiState());
-    store.dispatch(getPokemonByName.initiate());
-    await Promise.all(store.dispatch(getRunningQueriesThunk()));
-
-    return { props: {} };
-  }
-);
+// export async function getStaticProps() {
+//   const res = await fetch(
+//     `http://de1.api.radio-browser.info/json/stations/topclick`
+//   );
+//   const data = res.json();
+//   return { props: {} };
+// }
 
 export default App;

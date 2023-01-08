@@ -8,8 +8,6 @@ import { StyleProvider } from "@ant-design/cssinjs";
 
 const MyApp = ({ Component, ...rest }) => {
   const { store, props } = wrapper.useWrappedStore(rest);
-  
-  // console.log(store);
 
   return (
     <Provider store={store}>

@@ -14,7 +14,6 @@
     "@fontsource/roboto": "^4.5.8",
     "@reduxjs/toolkit": "^1.9.1",
     "antd": "^5.0.4",
-    "axios": "^1.2.1",
     "localforage": "^1.10.0",
     "lodash": "^4.17.21",
     "next": "^13.0.6",

@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
 import { HYDRATE } from "next-redux-wrapper";
 
 const initialState = {
