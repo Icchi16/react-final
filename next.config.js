@@ -1,13 +1,16 @@
 /** @type {import('next').NextConfig} */
-const NextConfig = {
-  reactStrictMode: true,
+const nextConfig = {
   async rewrites() {
     return [
       {
         source: "/radios",
-        destination: `${process.env.BASE_API}`,
+        destination: `http://de1.api.radio-browser.info/json/`,
       },
     ];
   },
+  env: {
+    BASE_API: "http://de1.api.radio-browser.info/json/",
+  },
 };
 
+export default nextConfig;
