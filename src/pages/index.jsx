@@ -17,7 +17,7 @@ const App = (props) => {
   console.log(topRadioLoading);
 
   if (topRadioLoading) return <div>Loading...</div>;
-  return (
+  else return (
     <div className="container mx-auto">
       <div>
         <h2 className="mb-7 mt-0">For You</h2>
