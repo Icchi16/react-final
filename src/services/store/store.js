@@ -11,4 +11,4 @@ const makeStore = () =>
       getDefaultMiddleware().concat(radioApi.middleware),
   });
 
-export const wrapper = createWrapper(makeStore);
+export const wrapper = createWrapper(makeStore, { debug: true });
