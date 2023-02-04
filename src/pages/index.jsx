@@ -15,8 +15,7 @@ const App = (props) => {
     artistSlides = [];
 
   const topRadio = useGetTopRadioQuery(
-    // "stations/search?countrycode=VN&limit=200&hidebroken=true"
-    "stations/topclick"
+    "stations/search?countrycode=VN&limit=200&hidebroken=true"
   );
   const topRadioSlides = topRadio.data;
   const topRadioIsLoading = topRadio.isLoading;

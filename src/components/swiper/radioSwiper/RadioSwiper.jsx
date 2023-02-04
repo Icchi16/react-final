@@ -18,25 +18,32 @@ const RadioSwiper = ({ slides }) => {
     )
   );
 
+  const SLIDES_PER_VIEWS = 6;
+  const SPACE_BETWEEN = 10;
   const radioList = slides;
+  let skeletonArray = new Array(SLIDES_PER_VIEWS).fill(1);
 
+  console.log(radioList);
   return isSomeQueryPending ? (
     <div>
-      {/* <Swiper
+      <Swiper
         className={styles.HomeSwiper}
         // install Swiper modules
         modules={[Navigation, Scrollbar]}
-        spaceBetween={10}
-        slidesPerView={6}
+        spaceBetween={SPACE_BETWEEN}
+        slidesPerView={SLIDES_PER_VIEWS}
         navigation
         key={1}
-        scrollbar={{ draggable: true }}
+        scrollbar={{ draggable: false }}
       >
-        <SwiperSlide>
-          <RadioSwiperSkeleton />
-        </SwiperSlide>
-      </Swiper> */}
-      <RadioSwiperSkeleton skeletonType={"radioList"}/>
+        {skeletonArray.map((slides) => {
+          return (
+            <SwiperSlide>
+              <RadioSwiperSkeleton skeletonType="radioList" />
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
     </div>
   ) : (
     <div className={styles.HomeSwiperContainer}>
@@ -44,8 +51,8 @@ const RadioSwiper = ({ slides }) => {
         className={styles.HomeSwiper}
         // install Swiper modules
         modules={[Navigation, Scrollbar]}
-        spaceBetween={10}
-        slidesPerView={6}
+        spaceBetween={SPACE_BETWEEN}
+        slidesPerView={SLIDES_PER_VIEWS}
         navigation
         key={1}
         scrollbar={{ draggable: true }}

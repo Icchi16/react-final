@@ -6,12 +6,13 @@ import Link from "next/link";
 const RadioCard = ({ radio }) => {
   const { Meta } = Card;
   return (
-    <Link href="/">
-      <Card styles={styles.RadioCard} hoverable>
-        <Meta
-          title={`Radio Title ${radio}`}
-          description={`Description of ${radio}`}
-        />
+    <Link href={radio.url_resolved}>
+      <Card
+        cover={<img src={radio.favicon} />}
+        hoverable
+      >
+        <div>Station</div>
+        <Meta title={radio.name} description={radio.countrycode} />
       </Card>
     </Link>
   );

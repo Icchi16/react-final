@@ -1,5 +1,6 @@
 import { Card, Skeleton } from "antd";
 import React from "react";
+import styles from "./RadioSwiperSkeleton.module.css";
 
 const RadioSwiperSkeleton = ({ skeletonType }) => {
   switch (skeletonType) {
@@ -7,11 +8,11 @@ const RadioSwiperSkeleton = ({ skeletonType }) => {
       const { Meta } = Card;
 
       return (
-        <Card>
-          {/* <Meta
-            title={<Skeleton.Input active />}
-            description={<Skeleton.Input active />}
-          /> */}
+        <Card cover={<Skeleton.Image active />} hoverable>
+          <Meta
+            title={<Skeleton.Input active block />}
+            description={<Skeleton.Input active block />}
+          />
         </Card>
       );
     }
